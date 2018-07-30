@@ -53,17 +53,18 @@
         $paymentStatus = $resp['data']['status'];
         $chargeResponsecode = $resp['data']['chargecode'];
         $chargeAmount = $resp['data']['amount'];
-        $chargeCurrency = $resp['data']['currency']
+        $chargeCurrency = $resp['data']['currency'];
 
-        if (($chargeResponsecode == "00" || $chargeResponsecode == "0") && ($chargeAmount == $amount)  && ($chargeCurrency == $currency)) {
+        if(($chargeResponsecode == "00" || $chargeResponsecode == "0") && ($chargeAmount == $amount)  && ($chargeCurrency == $currency)) {
           // transaction was successful...
              // please check other things like whether you already gave value for this ref
           // if the email matches the customer who owns the product etc
           //Give Value and return to Success page
-            echo("<h3>PAYMENT SUCCESSFUL. THANK YOU! YOUR PHONE WILL BE DELEIVERED WITHIN 3- 7 DAYS FROM THIS CONFIRMATION</h3>")
-        } else {
+            echo("<h3>PAYMENT SUCCESSFUL. THANK YOU! YOUR PHONE WILL BE DELEIVERED WITHIN 3- 7 DAYS FROM THIS CONFIRMATION</h3>");
+        } 
+        else {
             //Dont Give Value and return to Failure page
-             echo("<h3>FAILED TRANSACTION. PLEASE TRY AGAIN</h3>")
+             echo("<h3>FAILED TRANSACTION. PLEASE TRY AGAIN</h3>");
         }
     }
         else {
