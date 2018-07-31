@@ -1,0 +1,6 @@
+{
+  "name": "redirect",
+  "description": "A redirection page for Phonewave web application for confirmation of payment",
+  "repository": "https://github.com/heroku/redirect",
+  "addons": []
+}
